@@ -36,4 +36,10 @@ class HelperTest extends TestCase
     	$output = abc();
     	$this->assertEquals('abc', $output);
     }
+
+    /** @test */
+    public function it_has_hashslug_helper()
+    {
+        $this->assertTrue(function_exists('hashslug'));
+    }
 }

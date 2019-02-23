@@ -1,8 +1,13 @@
 <?php 
 
-/**
- * Helpers
- */
+
+if(! function_exists('hashslug')) {
+	function hashslug()
+	{
+		return \Illuminate\Support\Str::random(40);
+	}
+}
+
 if(! function_exists('abc')) {
 	function abc()
 	{
