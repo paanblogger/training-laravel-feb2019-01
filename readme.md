@@ -14,6 +14,23 @@
 
 **Service**: Think of service provider like TM Unifi, Celcom, McDonald. They provide services to end users. In application level, the application provide service to consumer, which the consumer is the other application that want to use the application services. 
 
+
+```php
+// helper
+userProcessor($username, $email, $password);
+// processor
+\App\Processors\UserProcessor::make($username, $email, $password);
+
+// services
+\App\Services\UserService::make($username)->avatar();
+// helper for services
+avatar($username);
+// api 
+return response()->json([
+	'avatar' => avatar(request()->username),
+]);
+```
+
 ## Macros
 
 - [Response](https://blog.nasrulhazim.com/2017/12/laravel-response-macro/)
