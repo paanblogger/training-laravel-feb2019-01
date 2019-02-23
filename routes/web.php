@@ -20,6 +20,10 @@ Route::get('/response-api', function () {
     return response()->api($data);
 });
 
+Route::setting('Payroll');
+Route::setting('Leave');
+Route::setting('Claim');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
