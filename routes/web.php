@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/response-api', function () {
+	$data = \App\User::all();
+    return response()->api($data);
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

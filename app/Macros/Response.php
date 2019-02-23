@@ -27,5 +27,14 @@ class Response
 				return 'Hi ' . $name;
 			});
 		}
+
+		HttpResponse::macro('api', function ($data = null, $message = null, $status = true, $code = 200) {
+            return response()->json([
+                'data'    => $data,
+                'message' => $message,
+                'status'  => $status,
+                'code'    => $code,
+            ], $code);
+        });
 	}
 }
