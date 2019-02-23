@@ -27,5 +27,12 @@ class AppServiceProvider extends ServiceProvider
     {
         // User::observe(UserObserver::class);
         \App\Observers\Kernel::register();
+
+        \App\Processors\A::macro('c', function() {
+            // do your stuf...
+            return 'c';
+        });
+
+        \App\Macros\Response::register();
     }
 }
