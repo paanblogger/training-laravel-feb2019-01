@@ -35,5 +35,6 @@ class AppServiceProvider extends ServiceProvider
 
         \App\Macros\Response::register();
         \App\Macros\Routing::register();
+        \App\Macros\Blueprint::register();
     }
 }
