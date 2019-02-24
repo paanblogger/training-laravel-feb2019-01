@@ -14,7 +14,7 @@ abstract class DuskTestCase extends BaseTestCase
     /**
      * Default Pause Duration - 2s
      */
-    const PAUSE_DURATION = 2000;
+    const PAUSE_DURATION = 3000;
 
     /**
      * Prepare for Dusk test execution.
