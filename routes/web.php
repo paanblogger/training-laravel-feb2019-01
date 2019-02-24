@@ -11,6 +11,16 @@
 |
 */
 
+Route::post('/avatar', function(Request $request) {
+	$request->avatar->store('avatars', 'avatars');
+ 
+    if ($request->wantsJson()) {
+        return response([], 204);
+    }
+
+    return back();
+})->name('upload.avatar');
+
 Route::get('/', function () {
     return view('welcome');
 });
