@@ -42,4 +42,12 @@ class SeedPreTest extends TestCase
 	    // assert acl
 	    // assert settings
     }
+
+    /** @test */
+    public function it_can_print_success_output()
+    {
+    	$this->artisan('seed:pre')
+			->expectsOutput('Preseed data has been seeded')
+			->assertExitCode(0);
+    }
 }
