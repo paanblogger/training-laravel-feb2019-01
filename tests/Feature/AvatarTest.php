@@ -2,11 +2,9 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
+use Tests\TestCase;
 
 class AvatarTest extends TestCase
 {
@@ -16,11 +14,11 @@ class AvatarTest extends TestCase
         Storage::fake('avatars');
 
         $response = $this->json('POST', '/avatar', [
-            'avatar' => UploadedFile::fake()->image('avatar.jpg')
+            'avatar' => UploadedFile::fake()->image('avatar.jpg'),
         ]);
 
         // Assert the file was stored...
-        /**
+        /*
          * @todo check why is not exist...
          */
         // Storage::disk('avatars')->assertExists('avatar.jpg');

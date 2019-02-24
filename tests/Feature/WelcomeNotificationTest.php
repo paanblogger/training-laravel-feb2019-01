@@ -2,11 +2,9 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
 use App\Notifications\WelcomNotification;
 use Illuminate\Support\Facades\Notification;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class WelcomeNotificationTest extends TestCase
 {
@@ -26,7 +24,7 @@ class WelcomeNotificationTest extends TestCase
 
         $user = factory(\App\User::class)->create();
         $user->notify(new WelcomNotification());
-        
+
         Notification::assertSentTo(
             [$user], WelcomNotification::class
         );

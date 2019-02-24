@@ -2,9 +2,8 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\TestCase;
 
 class AuthTest extends TestCase
 {
@@ -39,12 +38,12 @@ class AuthTest extends TestCase
     public function it_can_login()
     {
         $user = factory(\App\User::class)->create([
-            'email' => 'test@unit.php',
+            'email'    => 'test@unit.php',
             'password' => \Illuminate\Support\Facades\Hash::make('password'),
         ]);
 
         $this->post('/login', [
-            'email' => 'test@unit.php', 'password' => 'password'
+            'email' => 'test@unit.php', 'password' => 'password',
         ])->assertStatus(302);
     }
 
@@ -52,9 +51,9 @@ class AuthTest extends TestCase
     public function it_can_register()
     {
         $this->post('/login', [
-            'name' => 'PHPUnit Test',
-            'email' => 'test@unit.php', 
-            'password' => 'password',
+            'name'                  => 'PHPUnit Test',
+            'email'                 => 'test@unit.php',
+            'password'              => 'password',
             'password_confirmation' => 'password',
         ])->assertStatus(302);
     }
