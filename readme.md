@@ -100,6 +100,14 @@ php artisan make:test SeedProductionCommandTest
 - Database
 - Mocking
 
+### Laravel Dusk
+
+```
+$ composer require --dev laravel/dusk
+$ php artisan dusk:install
+$ cp .env .env.dusk.local
+```
+
 ## Laravel Nova
 
 ## Best Practices

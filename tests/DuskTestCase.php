@@ -12,6 +12,11 @@ abstract class DuskTestCase extends BaseTestCase
     use CreatesApplication;
 
     /**
+     * Default Pause Duration - 2s
+     */
+    const PAUSE_DURATION = 2000;
+
+    /**
      * Prepare for Dusk test execution.
      *
      * @beforeClass
@@ -31,7 +36,7 @@ abstract class DuskTestCase extends BaseTestCase
     {
         $options = (new ChromeOptions)->addArguments([
             '--disable-gpu',
-            '--headless',
+            // '--headless',
             '--window-size=1920,1080',
         ]);
 
