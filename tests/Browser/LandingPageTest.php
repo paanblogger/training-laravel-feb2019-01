@@ -24,24 +24,29 @@ class LandingPageTest extends DuskTestCase
                     ->assertSee('Laravel')
                     ->assertSeeLink('Login')
                     ->assertSeeLink('Register')
+                    ->pause(self::PAUSE_DURATION)
                     ->clickLink('Login')
                     // verify login page
                     ->assertPathIs('/login')
                     ->assertSeeLink('Login')
                     ->assertSeeLink('Register')
+                    ->pause(self::PAUSE_DURATION)
                     ->clickLink('Register')
                     // verify register page
                     ->assertPathIs('/register')
                     ->assertSeeLink('Login')
                     ->assertSeeLink('Register')
+                    ->pause(self::PAUSE_DURATION)
                     // try to register
                     ->type('name', 'Laravel Dusk')
                     ->type('email', 'dusk@laravel.com')
+                    ->pause(self::PAUSE_DURATION)
                     ->type('password', 'password')
                     ->type('password_confirmation', 'password')
                     ->press('Register')
-                    // verify registration successful
-                    ->assertPathIs('/home');
+                    // verify registration
+                    ->assertPathIs('/home')
+                    ->pause(self::PAUSE_DURATION);
         });
     }
 }
