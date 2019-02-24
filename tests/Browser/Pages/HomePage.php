@@ -25,6 +25,8 @@ class HomePage extends Page
     public function assert(Browser $browser)
     {
         $browser
+            ->resize(800, 600)
+            ->screenshot('home-page')
             ->assertSee('Laravel')
             ->assertSeeLink('Login')
             ->assertSeeLink('Register')

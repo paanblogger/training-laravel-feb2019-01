@@ -25,6 +25,8 @@ class Register extends Page
     public function assert(Browser $browser)
     {
         $browser
+            ->resize(800, 600)
+            ->screenshot('register-page')
             ->assertPathIs($this->url())
             ->assertSeeLink('Login')
             ->assertSeeLink('Register')
@@ -36,10 +38,12 @@ class Register extends Page
             ->pause(1000)
             ->type('password', 'password')
             ->type('password_confirmation', 'password')
+            ->screenshot('register-form-filled-page')
             ->press('Register')
             ->pause(1000)
             // verify registration
             ->assertPathIs('/home')
+            ->screenshot('home-user-page')
             ->pause(300);
     }
 

@@ -25,6 +25,8 @@ class Login extends Page
     public function assert(Browser $browser)
     {
         $browser
+            ->resize(800, 600)
+            ->screenshot('login-page')
             ->assertPathIs($this->url())
             ->assertSeeLink('Login')
             ->assertSeeLink('Register')
