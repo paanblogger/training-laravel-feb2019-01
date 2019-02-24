@@ -108,5 +108,5 @@ php artisan make:test SeedProductionCommandTest
 - [PHP Standard Recommendation (PSR)](https://www.php-fig.org/psr/)
 - PHPUnit Test
 - CI / CD 
-	[Using GitLab's pipeline with Laravel](https://lorisleiva.com/using-gitlabs-pipeline-with-laravel/)
-	[Laravel deployment using GitLab's pipelines](https://lorisleiva.com/laravel-deployment-using-gitlab-pipelines/)
+	- [Using GitLab's pipeline with Laravel](https://lorisleiva.com/using-gitlabs-pipeline-with-laravel/)
+	- [Laravel deployment using GitLab's pipelines](https://lorisleiva.com/laravel-deployment-using-gitlab-pipelines/)
