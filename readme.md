@@ -33,6 +33,8 @@ return response()->json([
 
 ## Macros
 
+[How do I Create Laravel Macros](https://laracasts.com/series/how-do-i/episodes/21)
+
 - [Response](https://blog.nasrulhazim.com/2017/12/laravel-response-macro/)
 - [Route](https://blog.nasrulhazim.com/2017/12/laravel-route-macro/)
 - [Blueprint](https://blog.nasrulhazim.com/2017/12/laravel-blueprint-macro/)
